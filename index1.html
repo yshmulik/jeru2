@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="header">
+  <h1>Header</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<div class="topnav">
+    <a href="a.htmml"target="sm">aaa</a>
+    <a href="b.htmml"target="sm">bbb</a>
+    <a href="c.htmml"target="sm">ccc</a>
+</div>
+
+<div class="row">
+  <div class="column side">
+    <a href="a.html"target="sm"class="btn btn-primary">aaa</a>
+    <a href="b.html"target="sm"class="btn btn-danger">bbb</a>
+    <a href="c.html"target="sm"class="btn btn-success">ccc</a>
+  </div>
+  
+ <div class="column middle">
+      <iframe name="sm" width="100%" height="100%" ></iframe>
+    
+  </div>
+  
+  <div class="column side">
+    <div class="card" style="width: 18rem;">
+        <img src="imges/images (1).jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="footer">
+    <div class="alert alert-primary" role="alert">
+      bla bla
+      </div>
+      <div class="alert alert-danger" role="alert">
+       bla bla
+      </div>
+      <div class="alert alert-success" role="alert">
+        bla bla
+      </div>
+</div>
+  
+</body>
+</html>
